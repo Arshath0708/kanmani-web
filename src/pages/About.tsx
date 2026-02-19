@@ -1,4 +1,12 @@
 import heroBanner from "@/assets/hero-banner.jpg";
+import { Clock, IndianRupee, ShoppingBag, Heart } from "lucide-react";
+
+const strengths = [
+  { icon: Clock, title: "Experience", desc: "Over 20 years of trusted service in Madurai." },
+  { icon: IndianRupee, title: "Affordable Pricing", desc: "Quality fashion starting from just ₹200." },
+  { icon: ShoppingBag, title: "Wide Variety", desc: "From sarees to shirts, kids wear to festive collections." },
+  { icon: Heart, title: "Customer Trust", desc: "Generations of families continue to shop with us." },
+];
 
 const About = () => {
   return (
@@ -8,7 +16,7 @@ const About = () => {
         <img src={heroBanner} alt="Kanmani Readymades store" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Our Story</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Our Journey</h1>
           <p className="font-tamil text-gold text-lg">பாரம்பரியம் மற்றும் புதுமை ஒன்றாக</p>
         </div>
       </section>
@@ -17,24 +25,26 @@ const About = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-6">The Kanmani Legacy</h2>
+            <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Our Journey – Kanmani Readymades</h2>
             <div className="w-16 h-0.5 bg-gold mx-auto mb-8" />
           </div>
           <div className="space-y-6 text-muted-foreground font-body leading-relaxed">
             <p>
-              Born in the heart of Madurai, <strong className="text-foreground">Kanmani Readymades</strong> has been a cornerstone of family fashion for years. 
-              What started as a humble shop has grown into one of Madurai's most trusted fashion destinations, serving thousands of families 
-              with premium clothing that blends the rich traditions of Tamil Nadu with modern trends.
+              <strong className="text-foreground">KANMANI READYMADES</strong> was established over 20 years ago in the heart of Madurai by{" "}
+              <strong className="text-foreground">Syed Abuthahir</strong>, with a vision to provide quality and affordable fashion for every family.
             </p>
             <p>
-              Our name, "Kanmani" — meaning the apple of the eye — reflects our belief that every customer is precious. 
-              We curate collections that make every family member feel special, whether it's a bride choosing her wedding silk, 
-              a father picking the perfect veshti, or a child dressed in their finest for a festival.
+              With dedication, honesty, and strong customer relationships, the store quickly became a trusted name among the people of Madurai.
             </p>
             <p>
-              From handloom cotton sarees to designer party wear, every piece in our store is carefully selected to meet 
-              the highest standards of quality, comfort, and style. We take pride in making premium fashion accessible 
-              to every family in Madurai.
+              Today, the business is successfully managed and expanded by{" "}
+              <strong className="text-foreground">Abdul Muthalip S</strong>, continuing the legacy with the same commitment to trust, affordability, and customer satisfaction.
+            </p>
+            <p>
+              From traditional sarees to modern shirts and kids wear, Kanmani Readymades has proudly served generations of families with clothing that blends comfort, culture, and affordability.
+            </p>
+            <p className="text-foreground font-semibold text-lg">
+              We believe that fashion should not be expensive — it should be accessible to everyone.
             </p>
           </div>
 
@@ -46,25 +56,18 @@ const About = () => {
             <p className="text-muted-foreground text-sm mt-2">Your Family's Trusted Fashion Destination</p>
           </div>
 
-          {/* Vision */}
-          <div className="bg-secondary rounded-sm p-8 text-center">
-            <h3 className="text-2xl font-heading font-bold text-foreground mb-4">Our Vision</h3>
-            <p className="text-muted-foreground font-body max-w-xl mx-auto">
-              To become Madurai's most trusted family fashion destination — where every visit is an experience, 
-              every purchase is a memory, and every customer becomes family.
-            </p>
+          {/* Strengths */}
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-heading font-bold text-foreground">Our Strengths</h3>
           </div>
-
-          {/* Values */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
-            {[
-              { title: "Tradition", desc: "Rooted in the rich textile heritage of Tamil Nadu" },
-              { title: "Trust", desc: "Built on decades of honest customer relationships" },
-              { title: "Trend", desc: "Always evolving with the latest fashion sensibilities" },
-            ].map((v) => (
-              <div key={v.title} className="text-center p-6">
-                <h4 className="font-heading text-xl font-semibold text-gold-dark mb-2">{v.title}</h4>
-                <p className="text-muted-foreground text-sm">{v.desc}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {strengths.map((s) => (
+              <div key={s.title} className="text-center p-6 bg-secondary rounded-sm">
+                <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mx-auto mb-4">
+                  <s.icon size={22} className="text-accent-foreground" />
+                </div>
+                <h4 className="font-heading text-xl font-semibold text-gold-dark mb-2">{s.title}</h4>
+                <p className="text-muted-foreground text-sm">{s.desc}</p>
               </div>
             ))}
           </div>

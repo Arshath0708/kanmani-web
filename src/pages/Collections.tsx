@@ -11,54 +11,72 @@ const collections = [
     title: "Silk Sarees",
     desc: "Exquisite Kanchipuram & Banarasi silks for every occasion",
     items: [
-      { name: "Kanchipuram Bridal Silk", price: "₹8,999 - ₹25,000", image: categoryWomen },
-      { name: "Mysore Silk Saree", price: "₹4,999 - ₹12,000", image: newArrival1 },
-      { name: "Pattu Saree Collection", price: "₹6,999 - ₹18,000", image: categoryFestive },
+      { name: "Kanchipuram Bridal Silk", price: "₹500 – ₹1,000", image: categoryWomen },
+      { name: "Mysore Silk Saree", price: "₹400 – ₹800", image: newArrival1 },
+      { name: "Pattu Saree Collection", price: "₹450 – ₹950", image: categoryFestive },
     ],
   },
   {
     title: "Cotton Sarees",
     desc: "Breathable, elegant cotton weaves for daily & festive wear",
     items: [
-      { name: "Chettinad Cotton", price: "₹1,499 - ₹3,500", image: newArrival1 },
-      { name: "Handloom Cotton", price: "₹999 - ₹2,500", image: categoryWomen },
-      { name: "Printed Cotton Saree", price: "₹799 - ₹1,999", image: newArrival1 },
+      { name: "Chettinad Cotton", price: "₹250 – ₹600", image: newArrival1 },
+      { name: "Handloom Cotton", price: "₹250 – ₹500", image: categoryWomen },
+      { name: "Printed Cotton Saree", price: "₹250 – ₹450", image: newArrival1 },
     ],
   },
   {
     title: "Salwar Sets & Kurtis",
     desc: "Trendy salwar kameez and designer kurtis for modern women",
     items: [
-      { name: "Designer Salwar Set", price: "₹1,999 - ₹5,500", image: newArrival2 },
-      { name: "Embroidered Kurti", price: "₹899 - ₹2,499", image: newArrival2 },
-      { name: "Party Wear Anarkali", price: "₹2,999 - ₹7,500", image: categoryFestive },
+      { name: "Designer Salwar Set", price: "₹350 – ₹800", image: newArrival2 },
+      { name: "Embroidered Kurti", price: "₹250 – ₹600", image: newArrival2 },
+      { name: "Party Wear Anarkali", price: "₹400 – ₹900", image: categoryFestive },
     ],
   },
   {
-    title: "Men's Shirts & Veshtis",
-    desc: "Classic veshtis, formal shirts & ethnic kurtas for men",
+    title: "Men's Shirts",
+    desc: "Formal & casual shirts for every occasion",
     items: [
-      { name: "Premium Silk Veshti", price: "₹999 - ₹3,500", image: newArrival3 },
-      { name: "Formal Shirt Collection", price: "₹699 - ₹1,999", image: categoryMen },
-      { name: "Designer Kurta Set", price: "₹1,499 - ₹4,500", image: categoryMen },
+      { name: "Formal Shirts", price: "Starting from ₹200", image: categoryMen },
+      { name: "Casual Shirts", price: "Starting from ₹200", image: newArrival3 },
+      { name: "Premium Silk Veshti", price: "₹300 – ₹800", image: categoryMen },
+    ],
+  },
+  {
+    title: "T-Shirts",
+    desc: "Comfortable and stylish t-shirts for everyday wear",
+    items: [
+      { name: "Printed T-Shirts", price: "Starting from ₹200", image: categoryMen },
+      { name: "Polo T-Shirts", price: "Starting from ₹250", image: newArrival3 },
+      { name: "Round Neck T-Shirts", price: "Starting from ₹200", image: categoryMen },
+    ],
+  },
+  {
+    title: "Jeans",
+    desc: "Trendy denim jeans for men in all fits and styles",
+    items: [
+      { name: "Denim Jeans", price: "Starting from ₹400", image: categoryMen },
+      { name: "Slim Fit Jeans", price: "Starting from ₹450", image: newArrival3 },
+      { name: "Regular Fit Jeans", price: "Starting from ₹400", image: categoryMen },
     ],
   },
   {
     title: "Kids Party Wear",
     desc: "Adorable ethnic & party outfits for your little ones",
     items: [
-      { name: "Girls Lehenga Set", price: "₹999 - ₹3,500", image: categoryKids },
-      { name: "Boys Ethnic Kurta", price: "₹699 - ₹2,499", image: categoryKids },
-      { name: "Kids Festival Collection", price: "₹599 - ₹1,999", image: categoryKids },
+      { name: "Girls Lehenga Set", price: "Starting from ₹250", image: categoryKids },
+      { name: "Boys Ethnic Kurta", price: "Starting from ₹250", image: categoryKids },
+      { name: "Kids Festival Collection", price: "Starting from ₹250", image: categoryKids },
     ],
   },
   {
     title: "Wedding Collections",
     desc: "Make your special day unforgettable with our bridal & groom wear",
     items: [
-      { name: "Bridal Silk Package", price: "₹15,000 - ₹50,000", image: categoryFestive },
-      { name: "Groom Sherwani Set", price: "₹8,999 - ₹25,000", image: categoryMen },
-      { name: "Wedding Family Pack", price: "₹25,000 - ₹75,000", image: categoryWomen },
+      { name: "Bridal Silk Package", price: "₹800 – ₹1,000", image: categoryFestive },
+      { name: "Groom Sherwani Set", price: "₹600 – ₹1,000", image: categoryMen },
+      { name: "Wedding Family Pack", price: "Starting from ₹500", image: categoryWomen },
     ],
   },
 ];
@@ -71,7 +89,7 @@ const Collections = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-3">Our Collections</h1>
           <p className="font-tamil text-gold text-lg">வண்ணமயமான ரகங்களுக்கு கண்மணி ரெடிமேட்ஸ்</p>
-          <p className="text-primary-foreground/70 text-sm mt-1">For Colorful Collections — Kanmani Readymades</p>
+          <p className="text-primary-foreground/70 text-sm mt-1">Premium Quality at Affordable Prices</p>
         </div>
       </section>
 

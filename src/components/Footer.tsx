@@ -57,7 +57,7 @@ const Footer = () => {
             <div className="flex flex-col gap-3 text-sm text-primary-foreground/70">
               <div className="flex items-start gap-2">
                 <MapPin size={16} className="text-gold mt-0.5 shrink-0" />
-                <span>45A, Nethaji Rd, Periyar, Madurai Main, Madurai, Tamil Nadu 625001</span>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=45A,+Nethaji+Rd,+Periyar,+Madurai+Main,+Madurai,+Tamil+Nadu+625001" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">45A, Nethaji Rd, Periyar, Madurai Main, Madurai, Tamil Nadu 625001</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-gold shrink-0" />

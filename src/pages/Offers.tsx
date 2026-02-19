@@ -5,19 +5,19 @@ const offers = [
   {
     icon: Percent,
     title: "Pongal Special – Up to 30% Off",
-    desc: "Celebrate the harvest festival with exclusive discounts on silk sarees, cotton collections, and ethnic wear for the whole family.",
+    desc: "Celebrate the harvest festival with exclusive discounts on sarees starting from ₹250, shirts from ₹200, and kids wear from ₹250!",
     badge: "Festival Offer",
   },
   {
     icon: Gift,
-    title: "Family Combo Pack – Save ₹2,000",
-    desc: "Buy outfits for 4 family members and get flat ₹2,000 off on the total bill. Perfect for weddings and festivals!",
+    title: "Family Combo Pack – Save More!",
+    desc: "Buy outfits for 4 family members and get extra discounts on the total bill. Affordable fashion for the whole family!",
     badge: "Combo Deal",
   },
   {
     icon: Users,
     title: "Wedding Season Special",
-    desc: "Get a complimentary blouse stitching with every bridal silk saree purchase above ₹10,000. Limited period offer!",
+    desc: "Get complimentary blouse stitching with every bridal silk saree purchase. Quality wedding collections at honest prices!",
     badge: "Wedding Offer",
   },
   {
@@ -43,7 +43,7 @@ const Offers = () => {
             Exclusive Offers & Deals
           </h1>
           <p className="text-primary-foreground/80 font-body max-w-lg mx-auto">
-            Celebrate every occasion with premium fashion at unbeatable prices
+            Premium quality fashion at affordable prices for every family
           </p>
         </div>
       </section>

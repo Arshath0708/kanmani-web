@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Star, ShieldCheck, TrendingUp, Users, ChevronRight } from "lucide-react";
+import { Star, ShieldCheck, TrendingUp, Users, ChevronRight, IndianRupee } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.jpg";
 import categoryWomen from "@/assets/category-women.jpg";
 import categoryMen from "@/assets/category-men.jpg";
@@ -11,27 +11,27 @@ import newArrival3 from "@/assets/new-arrival-3.jpg";
 
 const categories = [
   { name: "Women", image: categoryWomen, desc: "Sarees, Salwars & More" },
-  { name: "Men", image: categoryMen, desc: "Shirts, Veshtis & Kurtas" },
+  { name: "Men", image: categoryMen, desc: "Shirts, T-Shirts, Jeans & More" },
   { name: "Kids", image: categoryKids, desc: "Party & Ethnic Wear" },
   { name: "Festive", image: categoryFestive, desc: "Wedding & Celebration" },
 ];
 
 const newArrivals = [
-  { name: "Kanchipuram Silk Saree", price: "₹4,999", image: newArrival1 },
-  { name: "Designer Salwar Set", price: "₹2,499", image: newArrival2 },
-  { name: "Premium Veshti Set", price: "₹1,299", image: newArrival3 },
+  { name: "Cotton Saree Collection", price: "Starting from ₹250", image: newArrival1 },
+  { name: "Designer Salwar Set", price: "Starting from ₹350", image: newArrival2 },
+  { name: "Men's Casual Shirts", price: "Starting from ₹200", image: newArrival3 },
 ];
 
 const whyChooseUs = [
   { icon: ShieldCheck, title: "Premium Quality Fabrics", desc: "Handpicked materials from the finest weavers of Tamil Nadu" },
+  { icon: IndianRupee, title: "Affordable Pricing", desc: "Quality fashion starting from just ₹200 for every family" },
   { icon: TrendingUp, title: "Latest Tamil Nadu Trends", desc: "Stay ahead with the newest styles and patterns" },
-  { icon: Star, title: "Affordable Pricing", desc: "Premium fashion that doesn't break the bank" },
   { icon: Users, title: "Family Collections", desc: "Complete fashion solutions for every family member" },
 ];
 
 const testimonials = [
-  { name: "Priya Lakshmi", text: "Best saree collection in Madurai! I always shop here for festivals.", rating: 5 },
-  { name: "Ravi Kumar", text: "Excellent quality veshtis and shirts. Very professional service.", rating: 5 },
+  { name: "Priya Lakshmi", text: "Best saree collection in Madurai! Great quality at affordable prices.", rating: 5 },
+  { name: "Ravi Kumar", text: "Excellent quality shirts and t-shirts. Very professional service.", rating: 5 },
   { name: "Meena Sundari", text: "My kids love the party wear collection. Great designs at fair prices!", rating: 5 },
 ];
 
@@ -57,7 +57,7 @@ const Index = () => {
               <span className="gold-text">Meets Trend</span>
             </h1>
             <p className="text-primary-foreground/80 font-body text-lg md:text-xl mb-8 max-w-lg">
-              Discover premium fashion for the entire family at Madurai's most trusted readymade store.
+              Premium quality fashion at affordable prices for the entire family — trusted by Madurai for over 20 years.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -74,6 +74,15 @@ const Index = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Affordable Highlight */}
+      <section className="py-8 gold-gradient">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-accent-foreground font-heading text-xl md:text-2xl font-bold tracking-wide">
+            Best Quality. Best Price. For Every Family.
+          </p>
         </div>
       </section>
 
@@ -206,7 +215,7 @@ const Index = () => {
             Visit Our Store in Madurai Today
           </h2>
           <p className="text-muted-foreground mb-2 max-w-lg mx-auto">
-            Experience the finest collection of traditional and modern fashion, handpicked for your family.
+            Quality fashion at affordable prices for the entire family — trusted by Madurai for over 20 years.
           </p>
           <p className="font-heading font-semibold text-gold-dark text-lg mb-6">
             Serving Madurai with Pride

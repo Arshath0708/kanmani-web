@@ -44,7 +44,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold text-foreground">Address</h3>
-                    <p className="text-muted-foreground text-sm">45A, Nethaji Rd, Periyar, Madurai Main, Madurai, Tamil Nadu 625001</p>
+                    <a
+                      href="https://www.google.com/maps/dir/?api=1&destination=45A,+Nethaji+Rd,+Periyar,+Madurai+Main,+Madurai,+Tamil+Nadu+625001"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground text-sm hover:text-gold transition-colors underline underline-offset-2"
+                    >
+                      45A, Nethaji Rd, Periyar, Madurai Main, Madurai, Tamil Nadu 625001
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
