@@ -1,72 +1,125 @@
 import heroBanner from "@/assets/hero-banner.jpg";
+import ownerImage from "@/assets/kanmani-readymades-owner.jpg";
 import { Clock, IndianRupee, ShoppingBag, Heart } from "lucide-react";
 
 const strengths = [
-  { icon: Clock, title: "Experience", desc: "Over 20 years of trusted service in Madurai." },
-  { icon: IndianRupee, title: "Affordable Pricing", desc: "Quality fashion starting from just ₹200." },
-  { icon: ShoppingBag, title: "Wide Variety", desc: "From sarees to shirts, kids wear to festive collections." },
-  { icon: Heart, title: "Customer Trust", desc: "Generations of families continue to shop with us." },
+  {
+    icon: Clock,
+    title: "20+ Years of Excellence",
+    desc: "Serving families in Madurai with dedication, consistency, and trust for over two decades.",
+  },
+  {
+    icon: IndianRupee,
+    title: "Honest & Affordable Pricing",
+    desc: "Quality fashion collections thoughtfully priced to make style accessible for every family.",
+  },
+  {
+    icon: ShoppingBag,
+    title: "Extensive Collections",
+    desc: "From traditional silk sarees to modern menswear and kids' festive outfits — all under one roof.",
+  },
+  {
+    icon: Heart,
+    title: "Built on Customer Trust",
+    desc: "Generations of families continue to choose us for reliability, respect, and lasting relationships.",
+  },
 ];
 
 const About = () => {
   return (
     <main className="pt-20">
-      {/* Hero */}
+      {/* Hero Section */}
       <section className="relative py-24 md:py-32">
-        <img src={heroBanner} alt="Kanmani Readymades store" className="absolute inset-0 w-full h-full object-cover" loading="eager" />
+        <img
+          src={heroBanner}
+          alt="Kanmani Readymades showroom in Madurai"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
         <div className="hero-overlay absolute inset-0" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">Our Journey</h1>
-          <p className="font-tamil text-gold text-lg">பாரம்பரியம் மற்றும் புதுமை ஒன்றாக</p>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground mb-4">
+            Our Legacy
+          </h1>
+          <p className="font-tamil text-gold text-lg">
+            பாரம்பரியம் • நம்பிக்கை • தரம்
+          </p>
         </div>
       </section>
 
-      {/* Story */}
+      {/* Founder Section */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-foreground mb-6">Our Journey – Kanmani Readymades</h2>
-            <div className="w-16 h-0.5 bg-gold mx-auto mb-8" />
-          </div>
-          <div className="space-y-6 text-muted-foreground font-body leading-relaxed">
-            <p>
-              <strong className="text-foreground">KANMANI READYMADES</strong> was established over 20 years ago in the heart of Madurai by{" "}
-              <strong className="text-foreground">Syed Abuthahir</strong>, with a vision to provide quality and affordable fashion for every family.
-            </p>
-            <p>
-              With dedication, honesty, and strong customer relationships, the store quickly became a trusted name among the people of Madurai.
-            </p>
-            <p>
-              Today, the business is successfully managed and expanded by{" "}
-              <strong className="text-foreground">Abdul Muthalip S</strong>, continuing the legacy with the same commitment to trust, affordability, and customer satisfaction.
-            </p>
-            <p>
-              From traditional sarees to modern shirts and kids wear, Kanmani Readymades has proudly served generations of families with clothing that blends comfort, culture, and affordability.
-            </p>
-            <p className="text-foreground font-semibold text-lg">
-              We believe that fashion should not be expensive — it should be accessible to everyone.
-            </p>
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            
+            {/* Owner Image */}
+            <div className="flex justify-center">
+              <img
+                src={ownerImage}
+                alt="Founder of Kanmani Readymades, Madurai"
+                className="w-72 h-72 object-cover rounded-full shadow-lg"
+                loading="lazy"
+              />
+            </div>
+
+            {/* Founder Content */}
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-foreground mb-4">
+                Our Founder
+              </h2>
+              <div className="w-16 h-0.5 bg-gold mb-6" />
+
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong className="text-foreground">
+                  Kanmani Readymades
+                </strong>{" "}
+                was established with a simple yet powerful vision — to provide
+                quality, affordable fashion for every family in Madurai.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                With dedication, integrity, and a deep understanding of
+                customer needs, our founder laid the foundation for a store
+                built not just on business, but on relationships and trust.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Over the years, Kanmani Readymades has grown into a trusted
+                household name, proudly serving generations of families with
+                clothing that reflects tradition, comfort, and value.
+              </p>
+            </div>
           </div>
 
-          {/* Tamil Quote Divider */}
-          <div className="my-12 text-center py-6 border-t border-b border-gold/30">
+          {/* Quote Section */}
+          <div className="my-16 text-center py-8 border-t border-b border-gold/30">
             <p className="font-tamil text-gold text-xl italic">
               "உங்கள் குடும்பத்தின் நம்பிக்கைக்குரிய ஆடை மையம்"
             </p>
-            <p className="text-muted-foreground text-sm mt-2">Your Family's Trusted Fashion Destination</p>
+            <p className="text-muted-foreground text-sm mt-2">
+              Your Family’s Trusted Fashion Destination
+            </p>
           </div>
 
-          {/* Strengths */}
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-heading font-bold text-foreground">Our Strengths</h3>
+          {/* Strengths Section */}
+          <div className="text-center mb-10">
+            <h3 className="text-2xl font-heading font-bold text-foreground">
+              Why Families Choose Us
+            </h3>
           </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {strengths.map((s) => (
-              <div key={s.title} className="text-center p-6 bg-secondary rounded-sm">
+              <div
+                key={s.title}
+                className="text-center p-6 bg-secondary rounded-sm hover:shadow-md transition"
+              >
                 <div className="w-12 h-12 rounded-full gold-gradient flex items-center justify-center mx-auto mb-4">
                   <s.icon size={22} className="text-accent-foreground" />
                 </div>
-                <h4 className="font-heading text-xl font-semibold text-gold-dark mb-2">{s.title}</h4>
+                <h4 className="font-heading text-xl font-semibold text-gold-dark mb-2">
+                  {s.title}
+                </h4>
                 <p className="text-muted-foreground text-sm">{s.desc}</p>
               </div>
             ))}
