@@ -76,7 +76,7 @@ const Navbar = () => {
         {/* Actions (Socials) */}
         <div className="hidden lg:flex items-center gap-4">
           <a
-            href="https://www.instagram.com/kanmani_readymades_madurai/"
+            href="https://www.instagram.com/kanmani_readymades/"
             target="_blank"
             rel="noopener noreferrer"
             className={`transition-all duration-300 hover:scale-110 p-2 rounded-full ${
@@ -93,7 +93,7 @@ const Navbar = () => {
         {/* Mobile Menu Buttons */}
         <div className="flex items-center gap-3 lg:hidden">
           <a
-            href="https://www.instagram.com/kanmani_readymades_madurai/"
+            href="https://www.instagram.com/kanmani_readymades/"
             target="_blank"
             rel="noopener noreferrer"
             className={`transition-transform duration-300 hover:scale-110 p-2 ${

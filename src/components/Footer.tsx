@@ -36,7 +36,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex items-center gap-3">
               <a
-                href="https://www.instagram.com/kanmani_readymades_madurai/"
+                href="https://www.instagram.com/kanmani_readymades/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/80 hover:text-gold hover:border-gold hover:bg-white/5 transition-all duration-300 hover:scale-105"

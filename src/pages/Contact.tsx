@@ -145,12 +145,12 @@ const Contact = () => {
                         Instagram
                       </h3>
                       <a
-                        href="https://www.instagram.com/kanmani_readymades_madurai/"
+                        href="https://www.instagram.com/kanmani_readymades/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground font-body text-xs hover:text-gold transition-colors"
                       >
-                        @kanmani_readymades_madurai
+                        @kanmani_readymades
                       </a>
                     </div>
                   </div>
