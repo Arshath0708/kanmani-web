@@ -11,6 +11,41 @@ import {
   Handshake,
 } from "lucide-react";
 import festiveBanner from "@/assets/festive-banner.jpg";
+import SEO from "@/components/SEO";
+
+const whySchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.kanmanireadymades.in/why-choose-us/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.kanmanireadymades.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Why Choose Us",
+        "item": "https://www.kanmanireadymades.in/why-choose-us"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.kanmanireadymades.in/why-choose-us/#webpage",
+    "url": "https://www.kanmanireadymades.in/why-choose-us",
+    "name": "Why Choose Us | Kanmani Readymades Madurai",
+    "description": "Discover the core values and pillars of Kanmani Readymades Madurai - including affordable pricing, premium quality fabrics, GST compliance, and friendly service.",
+    "breadcrumb": {
+      "@id": "https://www.kanmanireadymades.in/why-choose-us/#breadcrumb"
+    }
+  }
+];
+
 
 const pillars = [
   {
@@ -63,14 +98,26 @@ const pillars = [
 const WhyChooseUs = () => {
   return (
     <main className="bg-[#FAFAFA] text-foreground min-h-screen page-transition">
+      <SEO
+        title="Why Choose Us | Kanmani Readymades Madurai - Our Core Pillars"
+        description="Discover our core values: affordable pricing, premium quality fabrics, transparent GST compliance, and equal fixed rates. We are Madurai's trusted family clothing showroom."
+        keywords="Why choose Kanmani Readymades, clothing showroom values Madurai, fixed price shop Madurai, GST clothes shop"
+        canonicalPath="/why-choose-us"
+        schema={whySchema}
+        preloadImages={[festiveBanner]}
+      />
       {/* Header Banner */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={festiveBanner}
-            alt="Kanmani Readymades showroom values header"
+            alt="Kanmani Readymades showroom values header banner"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
           />
           <div className="absolute inset-0 bg-[#3d0f1a]/85 backdrop-blur-sm" />
         </div>
@@ -106,9 +153,9 @@ const WhyChooseUs = () => {
                   <item.icon size={26} className="text-primary transition-colors duration-300" />
                 </div>
 
-                <h3 className="font-heading text-lg font-bold text-foreground mb-3 relative z-10">
+                <h2 className="font-heading text-lg font-bold text-foreground mb-3 relative z-10">
                   {item.title}
-                </h3>
+                </h2>
                 
                 <p className="text-muted-foreground font-body text-xs leading-relaxed relative z-10">
                   {item.desc}
@@ -120,9 +167,9 @@ const WhyChooseUs = () => {
           {/* Emotional Statement Banner */}
           <div className="mt-20 p-8 md:p-12 rounded-3xl border border-gray-100 bg-white text-center shadow-sm max-w-3xl mx-auto relative overflow-hidden">
             <div className="absolute top-0 left-0 w-2 h-full bg-gold" />
-            <h4 className="font-heading text-xl font-bold text-foreground mb-4">
+            <h2 className="font-heading text-xl font-bold text-foreground mb-4">
               Our Uncompromising Promise
-            </h4>
+            </h2>
             <p className="text-muted-foreground font-body text-sm leading-relaxed">
               We started with a pledge to ensure families don't have to choose between cost and quality. Every purchase at our store is backed by our promise of authenticity, fair GST compliance, and the lowest rates possible.
             </p>

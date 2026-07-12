@@ -10,10 +10,53 @@ import {
   Sparkles,
   Handshake,
 } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const aboutSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.kanmanireadymades.in/about/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.kanmanireadymades.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About Us",
+        "item": "https://www.kanmanireadymades.in/about"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.kanmanireadymades.in/about/#webpage",
+    "url": "https://www.kanmanireadymades.in/about",
+    "name": "About Us | Kanmani Readymades Madurai",
+    "description": "Learn about the heritage, mission, and co-founders of Kanmani Readymades. Providing quality family fashion at affordable prices in Madurai.",
+    "breadcrumb": {
+      "@id": "https://www.kanmanireadymades.in/about/#breadcrumb"
+    }
+  }
+];
+
 
 const About = () => {
   return (
     <main className="bg-[#FAFAFA] text-foreground min-h-screen page-transition">
+      <SEO
+        title="About Us | Kanmani Readymades Madurai - Family Clothing Legacy"
+        description="Learn about the legacy, mission, and co-founders of Kanmani Readymades. Discover why we have been Madurai's trusted family clothing showroom since 2006."
+        keywords="About Kanmani Readymades, Family Clothing Store legacy, Clothing shop history Madurai, Arshath Abdulla, Jannathul Firthouse"
+        canonicalPath="/about"
+        schema={aboutSchema}
+        preloadImages={[heroBanner]}
+      />
       
       {/* 1. Header Hero */}
       <section className="relative py-24 md:py-32 overflow-hidden">
@@ -21,9 +64,12 @@ const About = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBanner}
-            alt="Kanmani Readymades showroom interior"
+            alt="Kanmani Readymades showroom interior in Madurai Main"
             className="w-full h-full object-cover"
             loading="eager"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
           />
           <div className="absolute inset-0 bg-[#3d0f1a]/85 backdrop-blur-sm" />
         </div>
@@ -52,9 +98,11 @@ const About = () => {
               <div className="w-72 h-72 rounded-full overflow-hidden shadow-xl border-4 border-gold/25 relative z-10 scale-95 hover:scale-100 transition-transform duration-500">
                 <img
                   src={ownerImage}
-                  alt="Founder of Kanmani Readymades"
+                  alt="Founder of Kanmani Readymades Clothing Store in Madurai"
                   className="w-full h-full object-cover animate-fade-in"
                   loading="lazy"
+                  width="288"
+                  height="288"
                 />
               </div>
               <div className="absolute -top-4 -left-4 w-72 h-72 rounded-full bg-gold/5 border border-gold/10 z-0" />

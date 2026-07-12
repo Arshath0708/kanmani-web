@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import {
   MapPin,
   MessageCircle,
@@ -18,20 +17,43 @@ import {
   Clock,
 } from "lucide-react";
 import festiveBanner from "@/assets/explore-page-banner.png";
+import SEO from "@/components/SEO";
+
+const exploreSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.kanmanireadymades.in/explore/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.kanmanireadymades.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Explore Store",
+        "item": "https://www.kanmanireadymades.in/explore"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.kanmanireadymades.in/explore/#webpage",
+    "url": "https://www.kanmanireadymades.in/explore",
+    "name": "Explore Collections | Kanmani Readymades Madurai",
+    "description": "Explore Kanmani Readymades in Madurai. Discover affordable Men's wear, Women's wear, Kids' wear, and Traditional wear. High-quality family clothing showroom with transparent GST compliance.",
+    "breadcrumb": {
+      "@id": "https://www.kanmanireadymades.in/explore/#breadcrumb"
+    }
+  }
+];
 
 export default function Explore() {
-  useEffect(() => {
-    // Dynamic SEO title & description injection
-    document.title = "Explore Our Store | Kanmani Readymades Madurai - Family Clothing";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute(
-        "content",
-        "Explore Kanmani Readymades in Madurai. Discover affordable Men's wear, Women's wear, Kids' wear, and Traditional wear. High-quality family clothing showroom with transparent GST compliance."
-      );
-    }
-  }, []);
+
 
   const categories = [
     {
@@ -89,6 +111,14 @@ export default function Explore() {
 
   return (
     <main className="bg-[#FAFAFA] text-foreground min-h-screen page-transition">
+      <SEO
+        title="Explore Collections | Kanmani Readymades Madurai - Family Fashion"
+        description="Explore the wide collection at Kanmani Readymades showroom in Madurai. Affordable premium quality Men's wear, Women's wear, Kids' wear, Traditional sarees & seasonal outfits."
+        keywords="Kanmani Readymades collections, Clothing store Madurai Nethaji road, Silk sarees Madurai, Kids dress shop, Mens wear showroom"
+        canonicalPath="/explore"
+        schema={exploreSchema}
+        preloadImages={[festiveBanner]}
+      />
       
       {/* 1. Page Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
@@ -98,6 +128,10 @@ export default function Explore() {
             src={festiveBanner}
             alt="Explore Kanmani Readymades clothing collections banner"
             className="w-full h-full object-cover scale-105 object-center"
+            loading="eager"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
           />
           <div className="hero-overlay absolute inset-0" />
         </div>

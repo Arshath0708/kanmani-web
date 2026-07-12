@@ -10,6 +10,41 @@ import {
 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import heroBanner from "@/assets/hero-banner.png";
+import SEO from "@/components/SEO";
+
+const contactSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://www.kanmanireadymades.in/contact/#breadcrumb",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.kanmanireadymades.in"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Contact Us",
+        "item": "https://www.kanmanireadymades.in/contact"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.kanmanireadymades.in/contact/#webpage",
+    "url": "https://www.kanmanireadymades.in/contact",
+    "name": "Contact Us | Kanmani Readymades Madurai",
+    "description": "Get directions and contact details for Kanmani Readymades on Nethaji Road, Madurai. Send us a message on WhatsApp or call for collections information.",
+    "breadcrumb": {
+      "@id": "https://www.kanmanireadymades.in/contact/#breadcrumb"
+    }
+  }
+];
+
 
 const Contact = () => {
   const { toast } = useToast();
@@ -39,14 +74,26 @@ const Contact = () => {
 
   return (
     <main className="bg-[#FAFAFA] text-foreground min-h-screen page-transition">
+      <SEO
+        title="Contact Us | Kanmani Readymades Madurai - Visit Showroom"
+        description="Find our physical showroom location on Nethaji Road, Madurai. Get store hours, phone number, Google map direction and chat directly via WhatsApp."
+        keywords="Contact Kanmani Readymades, clothing store phone number Madurai, Nethaji Road shop map, WhatsApp clothing enquiry"
+        canonicalPath="/contact"
+        schema={contactSchema}
+        preloadImages={[heroBanner]}
+      />
       {/* Header Banner */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
             src={heroBanner}
-            alt="Kanmani Readymades contact banner"
+            alt="Kanmani Readymades contact page showroom header banner"
             className="w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
           />
           <div className="absolute inset-0 bg-[#3d0f1a]/85 backdrop-blur-sm" />
         </div>
@@ -196,9 +243,10 @@ const Contact = () => {
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-2">Your Name</label>
+                  <label htmlFor="contact-name" className="block text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-2">Your Name</label>
                   <input
                     type="text"
+                    id="contact-name"
                     value={form.name}
                     onChange={(e) =>
                       setForm({ ...form, name: e.target.value })
@@ -209,9 +257,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-2">Phone Number</label>
+                  <label htmlFor="contact-phone" className="block text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-2">Phone Number</label>
                   <input
                     type="tel"
+                    id="contact-phone"
                     value={form.phone}
                     onChange={(e) =>
                       setForm({ ...form, phone: e.target.value })
@@ -222,8 +271,9 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-2">Message</label>
+                  <label htmlFor="contact-message" className="block text-[10px] uppercase font-bold tracking-widest text-muted-foreground mb-2">Message</label>
                   <textarea
+                    id="contact-message"
                     value={form.message}
                     onChange={(e) =>
                       setForm({ ...form, message: e.target.value })

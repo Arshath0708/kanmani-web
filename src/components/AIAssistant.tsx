@@ -253,6 +253,9 @@ Please help me find the best available options. Thank you!`;
           <div className="flex flex-col gap-3 w-full animate-fade-in">
             <input
               type="text"
+              id="ai-assistant-name"
+              name="name"
+              aria-label="Your Name"
               placeholder="Enter your name..."
               value={formData.name}
               onChange={(e) => {
@@ -271,6 +274,9 @@ Please help me find the best available options. Thank you!`;
           <div className="flex flex-col gap-3 w-full animate-fade-in">
             <input
               type="tel"
+              id="ai-assistant-phone"
+              name="phone"
+              aria-label="Phone Number"
               maxLength={10}
               placeholder="e.g. 9876543210"
               value={formData.phone}
@@ -384,6 +390,8 @@ Please help me find the best available options. Thank you!`;
             {formData.colours.includes("Custom") && (
               <input
                 type="text"
+                id="ai-assistant-custom-colour"
+                aria-label="Custom Colour"
                 placeholder="Enter custom colour name..."
                 value={formData.customColour}
                 onChange={(e) => setFormData(prev => ({ ...prev, customColour: e.target.value }))}
@@ -462,6 +470,8 @@ Please help me find the best available options. Thank you!`;
               ))}
             </div>
             <textarea
+              id="ai-assistant-notes"
+              aria-label="Additional requirements or notes"
               rows={2}
               placeholder="e.g. Pure cotton fabric, floral print, conservative cut..."
               value={formData.notes}

@@ -11,6 +11,87 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
+import SEO from "@/components/SEO";
+
+const homeSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.kanmanireadymades.in/#website",
+    "url": "https://www.kanmanireadymades.in",
+    "name": "Kanmani Readymades",
+    "description": "Premium Quality Clothing for Men, Women & Kids at Affordable Prices in Madurai.",
+    "publisher": {
+      "@id": "https://www.kanmanireadymades.in/#organization"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.kanmanireadymades.in/#organization",
+    "name": "Kanmani Readymades",
+    "url": "https://www.kanmanireadymades.in",
+    "logo": "https://www.kanmanireadymades.in/apple-touch-icon.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-8428858856",
+      "contactType": "customer service",
+      "areaServed": "IN",
+      "availableLanguage": ["English", "Tamil"]
+    },
+    "sameAs": [
+      "https://www.instagram.com/kanmani_readymades/"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ClothingStore",
+    "@id": "https://www.kanmanireadymades.in/#clothingstore",
+    "name": "Kanmani Readymades",
+    "image": "https://www.kanmanireadymades.in/apple-touch-icon.png",
+    "url": "https://www.kanmanireadymades.in",
+    "telephone": "+918428858856",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "45A, Nethaji Rd, Periyar, Madurai Main",
+      "addressLocality": "Madurai",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "625001",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 9.9166739,
+      "longitude": 78.1136004
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "10:00",
+        "closes": "20:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/kanmani_readymades/"
+    ]
+  }
+];
+
 
 import heroBanner from "@/assets/hero-banner.png";
 import categoryWomen from "@/assets/category-women.jpg";
@@ -82,6 +163,14 @@ const Index = () => {
 
   return (
     <main className="bg-[#FAFAFA] text-foreground overflow-x-hidden page-transition">
+      <SEO
+        title="Kanmani Readymades | Best Family Clothing Store in Madurai"
+        description="Kanmani Readymades is Madurai's trusted family clothing store. Explore premium silk sarees, men's wear, kids' wear & wedding collections at affordable prices."
+        keywords="Kanmani Readymades, Readymades Shop in Madurai, Best Clothing Store in Madurai, Family Clothing Store, Traditional Wear Madurai, Men's Wear Madurai, Women's Wear Madurai, Kids Wear Madurai"
+        canonicalPath="/"
+        schema={homeSchema}
+        preloadImages={[heroBanner]}
+      />
       
       {/* 1. Premium Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -89,8 +178,12 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={heroBanner}
-            alt="Premium fashion collection banner"
+            alt="Premium fashion collection banner at Kanmani Readymades Madurai"
             className="w-full h-full object-cover scale-105"
+            loading="eager"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
           />
           {/* Subtle Dark Premium Overlay */}
           <div className="hero-overlay absolute inset-0" />
@@ -165,8 +258,11 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={festiveBanner}
-            alt="Elegance vision cover"
+            alt="Elegance vision cover - Kanmani Readymades family clothing showroom"
             className="w-full h-full object-cover scale-105"
+            loading="lazy"
+            width="1920"
+            height="1080"
           />
           <div className="absolute inset-0 bg-[#3d0f1a]/85 backdrop-blur-sm" />
         </div>
@@ -179,8 +275,11 @@ const Index = () => {
               <div className="w-64 h-80 rounded-2xl overflow-hidden relative shadow-2xl border-4 border-gold/45 z-10 scale-95 hover:scale-100 transition-transform duration-500">
                 <img
                   src={categoryWomen}
-                  alt="Traditional fashion visual"
+                  alt="Traditional fashion visual - Women's wear collection at Kanmani Readymades"
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="256"
+                  height="320"
                 />
               </div>
               <div className="absolute top-10 left-10 md:-left-4 w-64 h-80 rounded-2xl bg-white/5 border border-white/10 z-0" />
@@ -296,9 +395,9 @@ const Index = () => {
                       "{t.text}"
                     </p>
 
-                    <h4 className="font-heading text-gold font-bold text-sm uppercase tracking-widest">
+                    <h3 className="font-heading text-gold font-bold text-sm uppercase tracking-widest">
                       {t.name}
-                    </h4>
+                    </h3>
                     <span className="text-[10px] text-muted-foreground uppercase font-body mt-1 block tracking-wider">
                       Verified Purchaser • Madurai
                     </span>
@@ -346,8 +445,11 @@ const Index = () => {
         <div className="absolute inset-0 z-0">
           <img
             src={festiveBanner}
-            alt="CTA backdrop"
+            alt="CTA backdrop - Kanmani Readymades customer invitation showroom banner"
             className="w-full h-full object-cover scale-105"
+            loading="lazy"
+            width="1920"
+            height="1080"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-[#3d0f1a] via-[#661a2d] to-[#a37c3f]/90 opacity-95" />
         </div>
